@@ -1,0 +1,2000 @@
+{
+    "id": "eb1fe6751e031c02b5cefb19147635d6",
+    "name": "Quovo API v3",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "f366a7ace231580129f2a39502d5d6be",
+            "name": "Get a connection's sync progress",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/sync",
+            "description": "Check the ongoing Sync progress of an Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "18817d5ba89a05b0dcb80da84c117a2c",
+            "name": "Initiate a Sync on the Connection",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/sync",
+            "description": "Initiates a new sync on the connection.\n\nSyncs are an ongoing update attempt on a connection. Syncing a newly created connection ensures the connction contains the most recent, available financial data, which includes current holdings and historical transactions.\n\nBefore making the request, check that the `{{connection_id}}` Postman variable is set properly, or that the URL contains the correct connection id.\n\nThe request will return a sync object with a `progress.state` of \"queued\", which indic",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "e0989df2d27fcd0d9ef61a6298394c71",
+            "name": "Check a user's TOU status",
+            "url": "httpsexample.com\/\/users\/{user_id}\/terms_of_use",
+            "description": "Check whether or not a User has accepted Quovo\u2019s terms of use.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "944c83d104801ba550cc175b0e704c1d",
+            "name": "Update a user's TOU status",
+            "url": "httpsexample.com\/\/users\/{user_id}\/terms_of_use",
+            "description": "Update whether or not a User has accepted Quovo\u2019s terms of use.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ee2b2c061b44f1d5a8b4e2e5f308876d",
+            "name": "Get all active access tokens",
+            "url": "httpsexample.com\/\/tokens",
+            "description": "Retrieves all of your current Access Tokens.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "4d97aec545eef6e7225a517cf27b0c29",
+            "name": "Create a new access token",
+            "url": "httpsexample.com\/\/tokens",
+            "description": "Creates and returns a new Access Token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "7550c2efe3656c04a6df5c0b3d57ee48",
+            "name": "Delete an existing access token",
+            "url": "httpsexample.com\/\/tokens",
+            "description": "Deletes an Access Token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "4491b41ade6b59908b5cf241db2906ca",
+            "name": "Get a single connection",
+            "url": "httpsexample.com\/\/connections\/{connection_id}",
+            "description": "Provides information on a specific connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "c46b2579b5bb1f67f14fc8f3ecf72b7e",
+            "name": "Modify a connection",
+            "url": "httpsexample.com\/\/connections\/{connection_id}",
+            "description": "Modifies an existing connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "5375333878ee9c62e149b269d44948be",
+            "name": "Delete a connection",
+            "url": "httpsexample.com\/\/connections\/{connection_id}",
+            "description": "Deletes an existing Quovo connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "f2d5e4ae5674988817bd26c299f6e81f",
+            "name": "Get a single user",
+            "url": "httpsexample.com\/\/users\/{user_id}",
+            "description": "Provides information on a single User.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "63b5b66cf1737fcf1cdd4483643e88be",
+            "name": "Modify a user",
+            "url": "httpsexample.com\/\/users\/{user_id}",
+            "description": "Modifies an existing User.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "f3843aa465fe521ccaeb5c26c8a0f006",
+            "name": "Delete a User",
+            "url": "httpsexample.com\/\/users\/{user_id}",
+            "description": "Deletes a Quovo User.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "dfdbaa8938a19161101dd72d5ae10d0c",
+            "name": "Get all users",
+            "url": "httpsexample.com\/\/users",
+            "description": "Fetches all of your Users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "93c29efd0de96100047091d53dc7f3dd",
+            "name": "Create a new Quovo User",
+            "url": "httpsexample.com\/\/users",
+            "description": "Creates a new Quovo User.\n\nUsers are owners of Accounts, Portfolios, and any related financial data such as Positions and History.\n\nIf you have a Postman Environment set up, the previous request should have set your Access Token automatically. If not, be sure that your Access Token is included in the current request:\n\n1. Click on the \"Headers\" tab.\n2. Enter `Authorization` as the header field.\n3. Enter `Bearer token` as the header value, where `token` should be replaced with your actual Access T",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "126f5c149eba8fb130a0e0feaa3c4fa2",
+            "name": "Get a connection's transactions",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/transactions",
+            "description": "Provides information on a connection's historical transactions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "a6f2846993f7a942804c0fbd5db79201",
+            "name": "Get  all connections",
+            "url": "httpsexample.com\/\/connections",
+            "description": "Retrieves all connections across all users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "98af03c20f0d81c2b042d0808c10a742",
+            "name": "Get all institutions",
+            "url": "httpsexample.com\/\/institutions",
+            "description": "Provides information on all of Quovo's supported institutions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "e806e106f29a11c3c76d014b18b1bfe7",
+            "name": "Fetch the Connection's Accounts",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/accounts",
+            "description": "Fetches all of the accounts belonging to the connection. These are automatically created by Quovo after an initial sync.\n\nIf you have a Postman Environment set up, this request will automatically set the variable `account_id` to the id of the first account returned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "b375a3c589f8ae4224e019e9715d626e",
+            "name": "Get a user's connections",
+            "url": "httpsexample.com\/\/users\/{user_id}\/connections",
+            "description": "Returns all of a user's connections.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "0421f6c7b107f5f4417cf94c7b0a5a06",
+            "name": "Create a Connection",
+            "url": "httpsexample.com\/\/users\/{user_id}\/connections",
+            "description": "Creates a new Quovo Connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb29e206ef3c3701a3f13873c2d16569",
+            "name": "Get info about your API user",
+            "url": "httpsexample.com\/\/me",
+            "description": "Fetch information about your Quovo API user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "e4e028d9dc056532ffbfd02cefe03212",
+            "name": "Update your password",
+            "url": "httpsexample.com\/\/me",
+            "description": "Update your API password. All future requests to \/v3\/tokens must use the new password to properly authenticate.\r\n\r\nNew API passwords have several requirements:\r\n\r\n* Must be at least 6 characters long\r\n* Must contain a letter, a number, and a special character\r\n* Must not contain or be similar to your registered email or Quovo API username",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "f60c3f4fc4bd9287d3d008631a68a4dc",
+            "name": "Get a user's holdings",
+            "url": "httpsexample.com\/\/users\/{user_id}\/holdings",
+            "description": "Fetches all holdings for a specific user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ca2b219080b62dc7b87e500c92c55f05",
+            "name": "Request a new institution",
+            "url": "httpsexample.com\/\/users\/{user_id}\/institution_requests",
+            "description": "Requests a new financial institution for Quovo to retrieve data from.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "188677a551bcff2795c98c9e78dd74fb",
+            "name": "Get all registered webhooks",
+            "url": "httpsexample.com\/\/webhooks",
+            "description": "Retrieve your registered webhooks. \n\nNote: secret is intentionally omitted from all GET requests. It is only returned after being updated or after a new webhook is created.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "c3f8d4fba9f48851314c14807931af8d",
+            "name": "Update an existing webhook",
+            "url": "httpsexample.com\/\/webhooks",
+            "description": "Used to update an existing webhook.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "d91e89e9c551d9cbd899535091d07515",
+            "name": "Register a new webhook",
+            "url": "httpsexample.com\/\/webhooks",
+            "description": "Used to register new webhooks.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "946b6dcf494d556315bc16dbe8d636d0",
+            "name": "Delete a webhook",
+            "url": "httpsexample.com\/\/webhooks",
+            "description": "Deletes an existing webhook.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "bca7321f1925389e1db5806959775889",
+            "name": "Get challenges for a connection",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/challenges",
+            "description": "Retrieves any Challenges associated with a connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd18d58c845891c5abfa0846bdef8846",
+            "name": "Answer MFA challenges",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/challenges",
+            "description": "Answer available MFA Challenges for a connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "f3bd53aa573d1cacd8063bf3c9cca61d",
+            "name": "Get all holdings",
+            "url": "httpsexample.com\/\/holdings",
+            "description": "Fetches all holdings across all accounts and connections.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "455c333813df205c33800e8dc46ebd4e",
+            "name": "Get an account's holdings",
+            "url": "httpsexample.com\/\/accounts\/{account_id}\/holdings",
+            "description": "Fetches all holdings for a specific account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "baeaa694d1c7ca44bceb39e097b3c98e",
+            "name": "Get a single manual account",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}",
+            "description": "Returns a single Manual Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "f14097dc4fc43839d884fb01c05f8f09",
+            "name": "Update a manual account",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}",
+            "description": "Modifies a Manual Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "73b9f2298933c48568d6783e47952581",
+            "name": "Delete a manual account",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}",
+            "description": "Deletes a Manual Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "88336ab2be93fb6d2dc1e8d2b4b02f36",
+            "name": "Fetch an Account's Extras Information",
+            "url": "httpsexample.com\/\/accounts\/{account_id}\/extras",
+            "description": "Retrieves an Account's Extras Information.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "1d9bdff61a36f0e94c0b75cf6e079704",
+            "name": "Get a manual account's holdings",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}\/manual_holdings",
+            "description": "Fetches all of the Portfolio's Manual Assets.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "e68da81515076208a67fe75dc15f356f",
+            "name": "Update a manual holding",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}\/manual_holdings",
+            "description": "Updates an existing Manual Asset for the given Manual Portfolio.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "acdca5bc538e257e407438496bd5d31b",
+            "name": "Create a manual holding",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}\/manual_holdings",
+            "description": "Creates a new Manual Asset for the given Manual Portfolio.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "88b0e1172e7384d9974ab806c9cbf8c8",
+            "name": "Delete a manual holding",
+            "url": "httpsexample.com\/\/manual_accounts\/{manual_account_id}\/manual_holdings",
+            "description": "Deletes an existing Manual Asset for the given Manual Portfolio.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "manual_account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "4138e92e1b33b43ffd6bb4c1bccf45fd",
+            "name": "Get a user's manual accounts",
+            "url": "httpsexample.com\/\/users\/{user_id}\/manual_accounts",
+            "description": "Returns all Manual Portfolios of a given User.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "488b293ab46ffeb467b81a44940e54c9",
+            "name": "Create a manual account",
+            "url": "httpsexample.com\/\/users\/{user_id}\/manual_accounts",
+            "description": "Creates a Manual Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "351440f5d7e3a0b3c84acfffd5f553a6",
+            "name": "Get an account's transactions",
+            "url": "httpsexample.com\/\/accounts\/{account_id}\/transactions",
+            "description": "Provides information on an account's historical transactions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "373ec243ca13ca530760ceec230a1dd8",
+            "name": "Get a connection's manual holdings",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/manual_holdings",
+            "description": "Fetches all Manual Assets for an Account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "db597bf9e5362635e7b7d73465a016b0",
+            "name": "Get a user's transactions",
+            "url": "httpsexample.com\/\/users\/{user_id}\/transactions",
+            "description": "Provides historical transactions for a specific user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a854638d5f9f8d13b113c2af73d3f9a",
+            "name": "Get all manual accounts",
+            "url": "httpsexample.com\/\/manual_accounts",
+            "description": "Retrieves all Manual Accounts across all Users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ef1634b84f6d63d81124ac58b5fc4701",
+            "name": "Get all accounts",
+            "url": "httpsexample.com\/\/accounts",
+            "description": "Fetches all Accounts accross all Users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ca99d0250f985ae92993f47b55ea0703",
+            "name": "Get a connection's holdings",
+            "url": "httpsexample.com\/\/connections\/{connection_id}\/holdings",
+            "description": "Fetches all holdings for a specific connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "connection_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "0245a181d1e69c2873c8e39ed714ac18",
+            "name": "Get auth for an account",
+            "url": "httpsexample.com\/\/accounts\/{account_id}\/auth",
+            "description": "Retrieves all authentication information associated with an account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "196413b72f392f29944e731fbdecd630",
+            "name": "Get all manual holdings",
+            "url": "httpsexample.com\/\/manual_holdings",
+            "description": "Fetches all Manual Holdings accross all users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "2a599a644b050ff8fb7124895fb81665",
+            "name": "Create a UI token",
+            "url": "httpsexample.com\/\/users\/{user_id}\/ui_token",
+            "description": "This creates a single use ui token for a user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "04c64a306efe1758c28bf6a7663a3cbe",
+            "name": "Get a user's manual holdings",
+            "url": "httpsexample.com\/\/users\/{user_id}\/manual_holdings",
+            "description": "Fetches all Manual Assets for a User.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "bdf13c3df08999462141a83c8336b29e",
+            "name": "Get a single transaction",
+            "url": "httpsexample.com\/\/transactions\/{transaction_id}",
+            "description": "Provides information on a single historical transaction.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "transaction_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "6f74992463c2198ee5c578878fe79b9d",
+            "name": "Update a transaction",
+            "url": "httpsexample.com\/\/transactions\/{transaction_id}",
+            "description": "Update an existing historical transaction. \n\nCurrently, only used to update a transaction's expense_category.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "transaction_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "b241ef8b7ccf178bc691a9383d2906ba",
+            "name": "Get a user's accounts",
+            "url": "httpsexample.com\/\/users\/{user_id}\/accounts",
+            "description": "Fetches all Accounts for a specific user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "74e0b09d9799c4ddcb1b9c8ecebbe7e2",
+            "name": "Get a single account",
+            "url": "httpsexample.com\/\/accounts\/{account_id}",
+            "description": "Provides information on a single account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "de14c8b661599621fc4be00043495851",
+            "name": "Update an account",
+            "url": "httpsexample.com\/\/accounts\/{account_id}",
+            "description": "Modifies an existing account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "account_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "d12d934d9dfd527a047a98f212c48302",
+            "name": "Get a single institution",
+            "url": "httpsexample.com\/\/institutions\/{institution_id}",
+            "description": "Provides information on a single Quovo-supported institution.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "institution_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eb1fe6751e031c02b5cefb19147635d6",
+            "rawModeData": ""
+        }
+    ]
+}
