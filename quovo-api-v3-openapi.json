@@ -1,0 +1,1267 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Quovo API v3",
+        "description": "TODO: Add Description",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsexample.com\/"
+    ],
+    "paths": {
+        "\/connections\/{connection_id}\/sync": {
+            "get": {
+                "summary": "Get a connection's sync progress",
+                "description": "Check the ongoing Sync progress of an Account.",
+                "operationId": "ConnectionsSyncByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Initiate a Sync on the Connection",
+                "description": "Initiates a new sync on the connection.\n\nSyncs are an ongoing update attempt on a connection. Syncing a newly created connection ensures the connction contains the most recent, available financial data, which includes current holdings and historical transactions.\n\nBefore making the request, check that the `{{connection_id}}` Postman variable is set properly, or that the URL contains the correct connection id.\n\nThe request will return a sync object with a `progress.state` of \"queued\", which indic",
+                "operationId": "ConnectionsSyncByConnectionIdPost5",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/terms_of_use": {
+            "get": {
+                "summary": "Check a user's TOU status",
+                "description": "Check whether or not a User has accepted Quovo\u2019s terms of use.",
+                "operationId": "UsersTermsOfUseByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a user's TOU status",
+                "description": "Update whether or not a User has accepted Quovo\u2019s terms of use.",
+                "operationId": "UsersTermsOfUseByUserIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tokens": {
+            "get": {
+                "summary": "Get all active access tokens",
+                "description": "Retrieves all of your current Access Tokens.",
+                "operationId": "TokensGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a new access token",
+                "description": "Creates and returns a new Access Token.",
+                "operationId": "TokensPost4",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete an existing access token",
+                "description": "Deletes an Access Token.",
+                "operationId": "TokensDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/connections\/{connection_id}": {
+            "get": {
+                "summary": "Get a single connection",
+                "description": "Provides information on a specific connection.",
+                "operationId": "ConnectionsByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Modify a connection",
+                "description": "Modifies an existing connection.",
+                "operationId": "ConnectionsByConnectionIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a connection",
+                "description": "Deletes an existing Quovo connection.",
+                "operationId": "ConnectionsByConnectionIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}": {
+            "get": {
+                "summary": "Get a single user",
+                "description": "Provides information on a single User.",
+                "operationId": "UsersByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Modify a user",
+                "description": "Modifies an existing User.",
+                "operationId": "UsersByUserIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a User",
+                "description": "Deletes a Quovo User.",
+                "operationId": "UsersByUserIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users": {
+            "get": {
+                "summary": "Get all users",
+                "description": "Fetches all of your Users.",
+                "operationId": "UsersGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a new Quovo User",
+                "description": "Creates a new Quovo User.\n\nUsers are owners of Accounts, Portfolios, and any related financial data such as Positions and History.\n\nIf you have a Postman Environment set up, the previous request should have set your Access Token automatically. If not, be sure that your Access Token is included in the current request:\n\n1. Click on the \"Headers\" tab.\n2. Enter `Authorization` as the header field.\n3. Enter `Bearer token` as the header value, where `token` should be replaced with your actual Access T",
+                "operationId": "UsersPost4",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/connections\/{connection_id}\/transactions": {
+            "get": {
+                "summary": "Get a connection's transactions",
+                "description": "Provides information on a connection's historical transactions.",
+                "operationId": "ConnectionsTransactionsByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/connections": {
+            "get": {
+                "summary": "Get  all connections",
+                "description": "Retrieves all connections across all users.",
+                "operationId": "ConnectionsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/institutions": {
+            "get": {
+                "summary": "Get all institutions",
+                "description": "Provides information on all of Quovo's supported institutions.",
+                "operationId": "InstitutionsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/connections\/{connection_id}\/accounts": {
+            "get": {
+                "summary": "Fetch the Connection's Accounts",
+                "description": "Fetches all of the accounts belonging to the connection. These are automatically created by Quovo after an initial sync.\n\nIf you have a Postman Environment set up, this request will automatically set the variable `account_id` to the id of the first account returned.",
+                "operationId": "ConnectionsAccountsByConnectionIdGet4",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/connections": {
+            "get": {
+                "summary": "Get a user's connections",
+                "description": "Returns all of a user's connections.",
+                "operationId": "UsersConnectionsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a Connection",
+                "description": "Creates a new Quovo Connection.",
+                "operationId": "UsersConnectionsByUserIdPost4",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/me": {
+            "get": {
+                "summary": "Get info about your API user",
+                "description": "Fetch information about your Quovo API user.",
+                "operationId": "MeGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update your password",
+                "description": "Update your API password. All future requests to \/v3\/tokens must use the new password to properly authenticate.\r\n\r\nNew API passwords have several requirements:\r\n\r\n* Must be at least 6 characters long\r\n* Must contain a letter, a number, and a special character\r\n* Must not contain or be similar to your registered email or Quovo API username",
+                "operationId": "MePut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/holdings": {
+            "get": {
+                "summary": "Get a user's holdings",
+                "description": "Fetches all holdings for a specific user.",
+                "operationId": "UsersHoldingsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/institution_requests": {
+            "post": {
+                "summary": "Request a new institution",
+                "description": "Requests a new financial institution for Quovo to retrieve data from.",
+                "operationId": "UsersInstitutionRequestsByUserIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/webhooks": {
+            "get": {
+                "summary": "Get all registered webhooks",
+                "description": "Retrieve your registered webhooks. \n\nNote: secret is intentionally omitted from all GET requests. It is only returned after being updated or after a new webhook is created.",
+                "operationId": "WebhooksGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update an existing webhook",
+                "description": "Used to update an existing webhook.",
+                "operationId": "WebhooksPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Register a new webhook",
+                "description": "Used to register new webhooks.",
+                "operationId": "WebhooksPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a webhook",
+                "description": "Deletes an existing webhook.",
+                "operationId": "WebhooksDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/connections\/{connection_id}\/challenges": {
+            "get": {
+                "summary": "Get challenges for a connection",
+                "description": "Retrieves any Challenges associated with a connection.",
+                "operationId": "ConnectionsChallengesByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Answer MFA challenges",
+                "description": "Answer available MFA Challenges for a connection.",
+                "operationId": "ConnectionsChallengesByConnectionIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/holdings": {
+            "get": {
+                "summary": "Get all holdings",
+                "description": "Fetches all holdings across all accounts and connections.",
+                "operationId": "HoldingsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/accounts\/{account_id}\/holdings": {
+            "get": {
+                "summary": "Get an account's holdings",
+                "description": "Fetches all holdings for a specific account.",
+                "operationId": "AccountsHoldingsByAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/manual_accounts\/{manual_account_id}": {
+            "get": {
+                "summary": "Get a single manual account",
+                "description": "Returns a single Manual Account.",
+                "operationId": "ManualAccountsByManualAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a manual account",
+                "description": "Modifies a Manual Account.",
+                "operationId": "ManualAccountsByManualAccountIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a manual account",
+                "description": "Deletes a Manual Account.",
+                "operationId": "ManualAccountsByManualAccountIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/accounts\/{account_id}\/extras": {
+            "get": {
+                "summary": "Fetch an Account's Extras Information",
+                "description": "Retrieves an Account's Extras Information.",
+                "operationId": "AccountsExtrasByAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/manual_accounts\/{manual_account_id}\/manual_holdings": {
+            "get": {
+                "summary": "Get a manual account's holdings",
+                "description": "Fetches all of the Portfolio's Manual Assets.",
+                "operationId": "ManualAccountsManualHoldingsByManualAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a manual holding",
+                "description": "Updates an existing Manual Asset for the given Manual Portfolio.",
+                "operationId": "ManualAccountsManualHoldingsByManualAccountIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a manual holding",
+                "description": "Creates a new Manual Asset for the given Manual Portfolio.",
+                "operationId": "ManualAccountsManualHoldingsByManualAccountIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a manual holding",
+                "description": "Deletes an existing Manual Asset for the given Manual Portfolio.",
+                "operationId": "ManualAccountsManualHoldingsByManualAccountIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "manual_account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/manual_accounts": {
+            "get": {
+                "summary": "Get a user's manual accounts",
+                "description": "Returns all Manual Portfolios of a given User.",
+                "operationId": "UsersManualAccountsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a manual account",
+                "description": "Creates a Manual Account.",
+                "operationId": "UsersManualAccountsByUserIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/accounts\/{account_id}\/transactions": {
+            "get": {
+                "summary": "Get an account's transactions",
+                "description": "Provides information on an account's historical transactions.",
+                "operationId": "AccountsTransactionsByAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/connections\/{connection_id}\/manual_holdings": {
+            "get": {
+                "summary": "Get a connection's manual holdings",
+                "description": "Fetches all Manual Assets for an Account.",
+                "operationId": "ConnectionsManualHoldingsByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/transactions": {
+            "get": {
+                "summary": "Get a user's transactions",
+                "description": "Provides historical transactions for a specific user.",
+                "operationId": "UsersTransactionsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/manual_accounts": {
+            "get": {
+                "summary": "Get all manual accounts",
+                "description": "Retrieves all Manual Accounts across all Users.",
+                "operationId": "ManualAccountsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/accounts": {
+            "get": {
+                "summary": "Get all accounts",
+                "description": "Fetches all Accounts accross all Users.",
+                "operationId": "AccountsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/connections\/{connection_id}\/holdings": {
+            "get": {
+                "summary": "Get a connection's holdings",
+                "description": "Fetches all holdings for a specific connection.",
+                "operationId": "ConnectionsHoldingsByConnectionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "connection_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/accounts\/{account_id}\/auth": {
+            "get": {
+                "summary": "Get auth for an account",
+                "description": "Retrieves all authentication information associated with an account.",
+                "operationId": "AccountsAuthByAccountIdGet2",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/manual_holdings": {
+            "get": {
+                "summary": "Get all manual holdings",
+                "description": "Fetches all Manual Holdings accross all users.",
+                "operationId": "ManualHoldingsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/users\/{user_id}\/ui_token": {
+            "post": {
+                "summary": "Create a UI token",
+                "description": "This creates a single use ui token for a user.",
+                "operationId": "UsersUiTokenByUserIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/manual_holdings": {
+            "get": {
+                "summary": "Get a user's manual holdings",
+                "description": "Fetches all Manual Assets for a User.",
+                "operationId": "UsersManualHoldingsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/transactions\/{transaction_id}": {
+            "get": {
+                "summary": "Get a single transaction",
+                "description": "Provides information on a single historical transaction.",
+                "operationId": "TransactionsByTransactionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "transaction_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a transaction",
+                "description": "Update an existing historical transaction. \n\nCurrently, only used to update a transaction's expense_category.",
+                "operationId": "TransactionsByTransactionIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "transaction_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/accounts": {
+            "get": {
+                "summary": "Get a user's accounts",
+                "description": "Fetches all Accounts for a specific user.",
+                "operationId": "UsersAccountsByUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/accounts\/{account_id}": {
+            "get": {
+                "summary": "Get a single account",
+                "description": "Provides information on a single account.",
+                "operationId": "AccountsByAccountIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update an account",
+                "description": "Modifies an existing account.",
+                "operationId": "AccountsByAccountIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/institutions\/{institution_id}": {
+            "get": {
+                "summary": "Get a single institution",
+                "description": "Provides information on a single Quovo-supported institution.",
+                "operationId": "InstitutionsByInstitutionIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "institution_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "InitiateASyncOnTheConnectionrequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateANewAccessTokenrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateANewUserrequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateANewQuovoUserrequest": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateAConnectionrequest": {
+                "type": "object",
+                "properties": {
+                    "institution_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DeleteAnExistingAccessTokenrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RequestANewInstitutionrequest": {
+                "type": "object",
+                "properties": {
+                    "institution_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "institution_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DeleteAWebhookrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateAnExistingWebhookrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ModifyAConnectionrequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateAManualHoldingrequest": {
+                "type": "object",
+                "properties": {
+                    "symbol": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateAUsersTouStatusrequest": {
+                "type": "object",
+                "properties": {
+                    "has_accepted": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateAManualAccountrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateYourPasswordrequest": {
+                "type": "object",
+                "properties": {
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DeleteAManualHoldingrequest": {
+                "type": "object",
+                "properties": {
+                    "symbol": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateAConnectionrequest18": {
+                "type": "object",
+                "properties": {
+                    "institution_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ModifyAUserrequest": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateAManualHoldingrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "price": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RegisterANewWebhookrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateATransactionrequest": {
+                "type": "object",
+                "properties": {
+                    "cashflow_category": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "InitiateANewSyncrequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateAnAccountrequest": {
+                "type": "object",
+                "properties": {
+                    "is_disabled": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateAManualAccountrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "InitiateASyncOnTheConnectionrequest31": {
+                "type": "object",
+                "properties": {
+                    "sync_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
